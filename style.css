@@ -1,0 +1,52 @@
+/* Custom color combination */
+body {
+    background-color: #f4f4f4;
+    color: rgb(0, 0, 0);
+  }
+  
+  .navbar {
+    background-color: #fff; /* Set background color to white */
+  }
+  
+  .navbar-brand,
+  .navbar-nav .nav-link {
+    color: rgb(0, 0, 0) !important;
+  }
+  
+  .navbar-toggler {
+    border-color: #fff;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff;
+  }
+  
+  .services {
+    background-color: #fff;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners for cards */
+  }
+  
+  .btn {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  .container {
+    border-radius: 10px; /* Rounded corners for containers */
+  }
+  
+  .custom-img-size {
+    width: 350px; /* Adjust the width as needed */
+    height: 350px; /* Adjust the height as needed */
+  }
+  
+
+  
