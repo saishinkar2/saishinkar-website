@@ -1,12 +1,14 @@
-// submitForm.js
+const handleSubmit = (event) => {
+  event.preventDefault();
 
-exports.handler = async (event, context) => {
-  const { name, email, message } = JSON.parse(event.body);
-  
-  // Here you can perform custom logic like sending emails, storing data, etc.
-  
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: 'Form submitted successfully!' }),
-  };
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => navigate("/thank-you/"))
+    .catch((error) => alert(error));
 };
