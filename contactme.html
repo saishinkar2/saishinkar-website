@@ -38,8 +38,6 @@
       </div>
     </nav>
 
-    
-
     <!-- Contact Form Section -->
     <section id="contact" class="py-5">
       <div class="container">
@@ -48,18 +46,19 @@
             <div class="card">
               <div class="card-body">
                 <h3 class="text-center mb-4">Contact Me</h3>
-                <form name="contact" method="POST" netlify>
+                <form name="contact" method="POST" data-netlify="true" action="/.netlify/functions/submitForm">
+                  <input type="hidden" name="form-name" value="contact">
                   <div class="mb-3">
                     <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                   </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                   </div>
                   <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -69,10 +68,6 @@
         </div>
       </div>
     </section>
-
-      <form name="contact" method="POST" action="/.netlify/functions/submitForm">
-
-    
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-123456" crossorigin="anonymous"></script>
